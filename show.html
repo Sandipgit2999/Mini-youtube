@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="show.css" />
+  </head>
+  <body id="body">
+    <div id="main"> <div  id="container"></div>
+
+    <div id="thumbnail"></div></div>
+   
+    
+   
+  </body>
+</html>
+<!-- <script type="text/javascript" src="index.js"></script> -->
+
+<script>
+
+
+function showapp(){
+  let getting=JSON.parse(localStorage.getItem("start"));
+
+  //console.log(getting)
+  let iframing=document.createElement("iframe");
+  iframing.src=getting.key;
+  iframing.allow="fullscreen";
+  iframing.allow="autoplay";
+
+  document.getElementById("container").append(iframing);
+}
+showapp();
+
+
+const append = (videos) => {
+  console.log("videos", videos);
+  
+  let show_videos = document.getElementById("thumbnail");
+  show_videos.innerHTML = null;
+
+  videos.forEach(
+    ({
+      snippet: {
+        thumbnails: {
+          high: { url },
+        },
+      },
+      snippet: { title },
+      id: { videoId },
+    }) => {
+      //console.log(default);
+      let div = document.createElement("div");
+
+      let image = document.createElement("img");
+      image.src = url;
+      image.id = "thumb";
+
+      let iframe = document.createElement("iframe");
+
+      iframe.src = `https://www.youtube.com/embed/${videoId}`;
+
+      // iframe.allow = "fullscreen";
+       let frame=`https://www.youtube.com/embed/${videoId}`
+
+      let name = document.createElement("h5");
+      name.innerText = title;
+
+      div.append(image, name);
+      show_videos.append(div);
+      div.addEventListener("click", function () {
+        // console.log(iframe);
+        // let obj={
+        // key:frame,
+        // }
+
+        // localStorage.setItem("frames",JSON.stringify(obj) )
+
+        
+        console.log(frame);
+        startvideo(frame);
+
+        //show(iframe);
+        // let ab = document.createElement("a");
+        // ab.setAttribute("href", "show.html");
+        // ab.append(div);
+        // let div2 = document.createElement("div");
+        // div2.append(iframe);
+        // // console.log(div2);
+        // let v = document.getElementById("videos");
+        // v.append(iframe);
+      });
+    }
+  );
+};
+let a=JSON.parse(localStorage.getItem("videos"))
+let arr=[];
+console.log("thumbnail movies",a)
+for(i=0;i<3;i++){
+arr.push(a[i]);
+}
+console.log("Movies array",arr);
+  append(arr);
+// vid.innerHTML="My name is khan";
+// console.log(vid);
+
+function startvideo(d) {
+  //let arr=[];
+  let obj=null
+  console.log("data;", d);
+   obj={
+        key:d,
+        }
+
+        // arr.push(obj);
+        // console.log(arr);
+localStorage.setItem("start",JSON.stringify(obj));
+
+window.location.href = "show.html";
+showapp();
+  // vid.innerHTML=null;
+  // console.log("data:", data);
+  // let div5 = document.createElement("div");
+
+  // div5.append(d);
+  // console.log(div5);
+
+  //  document.querySelector("#cotainer").append(div5);
+}
+
+
+let b=JSON.parse(localStorage.getItem("videos"))
+  append(b);
+// vid.innerHT
+
+
+</script>
+<!-- <script>
+let abc=document.getElementById('aashiq')
+function startvideo(){
+  abc.innerHTML=null;
+  let getframe=JSON.parse(localStorage.getItem("frames"));
+
+let div=document.createElement("div");
+
+let iframe=document.createElement("iframe")
+
+iframe.src=getframe.key;
+iframe.height="700"
+iframe.width="900"
+iframe.allow="fullscreen"
+
+div.append(iframe);
+ 
+ abc.append(div);
+
+}
+
+
+</script> -->

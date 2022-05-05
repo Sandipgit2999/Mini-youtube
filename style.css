@@ -1,0 +1,90 @@
+#thumb {
+  width: 100%;
+  height: 75%;
+}
+
+#logo {
+  margin-right: 190px;
+  display: flex;
+  align-items: center;
+ 
+  
+  height: 50px;
+}
+#logo > img {
+  margin-bottom: 13px;
+  margin-left: 10px;
+}
+#icon {
+  margin-left: 120px;
+  width: 380px;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
+#icon > span,p {
+  margin-left: 30px;
+  margin-top: 12px;
+}
+#icon :nth-child(1) {
+  margin-left: 120px;
+}
+
+/* background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAADFBMVEUIVYEHVYUWUHYJVYAWL8e8AAAAUElEQVR4nO3BMQEAMAwDoKz173kW8vUBEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGtLLY9ahtoHjbIHCfIIcfoAAAAASUVORK5CYII="); */
+
+#show_videos {
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  gap: 28px;
+}
+
+#show_videos > div {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+}
+h5 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#head {
+  display: flex;
+  justify-content: flex-start;
+  justify-content: center;
+  border: 1px solid red;
+ 
+}
+img {
+  width: 100px;
+  height: 50px;
+  margin-top: 15px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAADFBMVEUIVYEHVYUWUHYJVYAWL8e8AAAAUElEQVR4nO3BMQEAMAwDoKz173kW8vUBEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGtLLY9ahtoHjbIHCfIIcfoAAAAASUVORK5CYII=");
+  background-color: black;
+}
+#query {
+  margin-left: 150px;
+  width: 380px;
+  height: 26px;
+  
+}
+#search >button {
+  height: 28px;
+  width: 60px;
+ 
+  
+}
+#red {
+  color: red;
+}
+
+#main {
+  width: 100%;
+  height: 100px;
+  /* border: 1px solid black; */
+}
+
+#head > img {
+  background-color: blue;
+}
