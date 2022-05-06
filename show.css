@@ -35,7 +35,7 @@ iframe{
 #thumbanil > div{
     width: 90%;
     height: 60px;
-    border: 1px solid rgb(151, 0, 0);
+    border: 1px solid gray
     margin-bottom: 10px;
 }
 

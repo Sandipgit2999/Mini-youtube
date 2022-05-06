@@ -8,7 +8,7 @@ let trendinghvideos = async () => {
    
 
     const res1 = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=top%202&key=AIzaSyAXGwIiUb5XCqKLJzaaSXR4vz7_t5Bi6gQ`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=trending%202&key=AIzaSyAXGwIiUb5XCqKLJzaaSXR4vz7_t5Bi6gQ`
     );
 
     const data1 = await res1.json();
@@ -19,7 +19,7 @@ let trendinghvideos = async () => {
   }
 };
 
-// trendinghvideos();
+trendinghvideos();
 
 
 
